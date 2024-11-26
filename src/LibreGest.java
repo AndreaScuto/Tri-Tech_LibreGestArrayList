@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class LibreGest {
@@ -49,9 +48,7 @@ public class LibreGest {
                         }
                     }
                 }
-                case 2 -> {
-                    libreria.rimuoviMateriali();
-                }
+                case 2 -> libreria.rimuoviMateriali();
                 case 3 -> {
                     System.out.print("Inserisci titolo per ricerca: ");
                     titolo = userInput.nextLine();
@@ -59,16 +56,10 @@ public class LibreGest {
                         System.out.println("Titolo non trovato...");
                     }
                 }
-                case 4 -> {
-                    libreria.stampaCollezione();
-                }
-                case 5 -> {
-                    libreria.statistiche();
-                }
+                case 4 -> libreria.stampaCollezione();
+                case 5 -> libreria.statistiche();
                 case 0 -> {} //Esci dal programma.
-                default -> {
-                    System.out.println("Inserisci valore valido!");
-                }
+                default -> System.out.println("Inserisci valore valido!");
             }
         } while (scelta != 0);
         userInput.close();
