@@ -11,7 +11,7 @@ Visualizzazione della collezione: Stampa a schermo tutti i materiali presenti ne
 
 Statistiche della collezione: Mostra il numero totale di libri, riviste e DVD presenti.
 
-Struttura del Progetto
+Struttura del Progetto: 
 Il progetto è composto dalle seguenti classi principali:
 
 Materiale: Classe astratta base che rappresenta un generico materiale con attributi comuni come titolo e autore.
