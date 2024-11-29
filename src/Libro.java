@@ -1,4 +1,4 @@
-public class Libro extends Materiale {
+public class Libro extends Media implements ElementiBiblioteca {
 
     private String genere;
 
@@ -11,6 +11,16 @@ public class Libro extends Materiale {
         this.genere = genere;
     }
 
+    @Override
+    public int getId() {
+        return 0;
+    }
+
+    @Override
+    public String getTitolo() {
+        return super.getTitolo();
+    }
+
     public void setGenere(String genere) {
         this.genere = genere;
     }
@@ -20,10 +30,9 @@ public class Libro extends Materiale {
     }
 
     @Override
-    public void stampa() {
-        System.out.println("Libro{" +
+    public String Descrivi() {
+        return "Libro{" +
                 "genere='" + genere + '\'' +
-                "} " + super.toString());
+                "} " + super.toString();
     }
-
 }

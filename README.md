@@ -14,14 +14,14 @@ Statistiche della collezione: Mostra il numero totale di libri, riviste e DVD pr
 Struttura del Progetto: 
 Il progetto è composto dalle seguenti classi principali:
 
-Materiale: Classe astratta base che rappresenta un generico materiale con attributi comuni come titolo e autore.
+Media: Classe astratta base che rappresenta un generico materiale con attributi comuni come titolo e autore.
 
-Sottoclassi di Materiale:
+Sottoclassi di Media:
 
 Libro: Include l'attributo specifico genere.
 Rivista: Include l'attributo specifico formato.
 Dvd: Include l'attributo specifico durata.
-Libreria: Gestisce la collezione di materiali usando una ArrayList<Materiale> e offre metodi per le operazioni principali.
+Libreria: Gestisce la collezione di materiali usando una ArrayList<Media> e offre metodi per le operazioni principali.
 
 LibreGest: Contiene il metodo main() e gestisce l'interazione con l'utente tramite un menù.
 

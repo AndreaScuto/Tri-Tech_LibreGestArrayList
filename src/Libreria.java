@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class Libreria {
 
-    private ArrayList<Materiale> collezione;
+    private ArrayList<Media> collezione;
 
-    public Libreria(ArrayList<Materiale> collezione) {
+    public Libreria(ArrayList<Media> collezione) {
         this.collezione = collezione;
     }
 
@@ -12,7 +12,7 @@ public class Libreria {
         this.collezione = new ArrayList<>();
     }
 
-    public void aggiungiMateriale(Materiale m) {
+    public void aggiungiMateriale(Media m) {
         collezione.add(m);
         System.out.println("Aggiunto materiale.");
     }
@@ -24,24 +24,24 @@ public class Libreria {
 
     public boolean cercaTitolo(String titolo) {
         boolean flag = false;
-        for (Materiale m : collezione) {
+        for (Media m : collezione) {
             if (m.getTitolo().equalsIgnoreCase(titolo)) {
                 flag = true;
-                m.stampa();
+                m.Descrivi();
             }
         }
         return flag;
     }
 
     public void stampaCollezione() {
-        for (Materiale m : collezione) {
-            m.stampa();
+        for (Media m : collezione) {
+            System.out.println(m.Descrivi());
         }
     }
 
     public void statistiche() {
         int r = 0, l = 0, d = 0;
-        for (Materiale m : collezione) {
+        for (Media m : collezione) {
             if (m instanceof Rivista) {
                 r++;
             }
@@ -56,6 +56,6 @@ public class Libreria {
         System.out.println("Numero di riviste: " + r);
         System.out.println("Numero di libri: " + l);
         System.out.println("Numero di DVD: " + d);
+        System.out.println("Tutti gli elementi: "+r+d+l);
     }
-
 }

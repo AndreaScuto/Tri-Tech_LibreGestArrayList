@@ -1,12 +1,12 @@
-public abstract class Materiale {
+public abstract class Media implements ElementiBiblioteca{
 
     private String titolo, autore;
 
-    public Materiale() {
+    public Media() {
 
     }
 
-    public Materiale(String titolo, String autore) {
+    public Media(String titolo, String autore) {
         this.titolo = titolo;
         this.autore = autore;
     }
@@ -26,8 +26,6 @@ public abstract class Materiale {
     public String getAutore() {
         return autore;
     }
-
-    public abstract void stampa();
 
     @Override
     public String toString() {

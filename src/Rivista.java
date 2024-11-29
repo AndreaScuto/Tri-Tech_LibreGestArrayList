@@ -1,4 +1,4 @@
-public class Rivista extends Materiale {
+public class Rivista extends Media implements ElementiBiblioteca{
 
     private String formato;
 
@@ -11,6 +11,16 @@ public class Rivista extends Materiale {
         this.formato = formato;
     }
 
+    @Override
+    public int getId() {
+        return 0;
+    }
+
+    @Override
+    public String getTitolo() {
+        return super.getTitolo();
+    }
+
     public void setFormato(String formato) {
         this.formato = formato;
     }
@@ -20,9 +30,9 @@ public class Rivista extends Materiale {
     }
 
     @Override
-    public void stampa() {
-        System.out.println("Rivista{" +
+    public String Descrivi() {
+        return  "Rivista{" +
                 "formato='" + formato + '\'' +
-                "} " + super.toString());
+                "} " + super.toString();
     }
 }

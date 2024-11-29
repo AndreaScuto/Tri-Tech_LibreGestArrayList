@@ -1,4 +1,4 @@
-public class Dvd extends Materiale {
+public class Dvd extends Media implements ElementiBiblioteca{
 
     private String durata;
 
@@ -11,6 +11,16 @@ public class Dvd extends Materiale {
         this.durata = durata;
     }
 
+    @Override
+    public int getId() {
+        return 0;
+    }
+
+    @Override
+    public String getTitolo() {
+        return super.getTitolo();
+    }
+
     public void setDurata(String durata) {
         this.durata = durata;
     }
@@ -20,9 +30,9 @@ public class Dvd extends Materiale {
     }
 
     @Override
-    public void stampa() {
-        System.out.println("Dvd{" +
+    public String Descrivi() {
+        return "Dvd{" +
                 "durata='" + durata + '\'' +
-                "} " + super.toString());
+                "} " + super.toString();
     }
 }
