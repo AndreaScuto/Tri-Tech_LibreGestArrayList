@@ -1,19 +1,20 @@
-public class Dvd extends Media implements ElementiBiblioteca{
+public class Dvd extends Media implements ElementiBiblioteca, Vendibile {
 
     private String durata;
+    double prezzo;
 
-    public Dvd(String durata) {
-        this.durata = durata;
+    public Dvd() {
     }
 
-    public Dvd(String titolo, String autore, String durata) {
-        super(titolo, autore);
+    public Dvd(String titolo, String autore, String durata, double prezzo, int quantita) {
+        super(titolo, autore, quantita);
         this.durata = durata;
+        this.prezzo = prezzo;
     }
 
     @Override
     public int getId() {
-        return 0;
+        return super.getId();
     }
 
     @Override
@@ -32,7 +33,21 @@ public class Dvd extends Media implements ElementiBiblioteca{
     @Override
     public String Descrivi() {
         return "Dvd{" +
-                "durata='" + durata + '\'' +
-                "} " + super.toString();
+                "id=" + getId() +
+                ", titolo='" + getTitolo() + '\'' +
+                ", autore='" + getAutore() + '\'' +
+                ", durata='" + durata + '\'' +
+                ", prezzo=" + prezzo + "€" +
+                '}';
+    }
+
+    @Override
+    public double getPrezzo() {
+        return prezzo;
+    }
+
+    @Override
+    public void setPrezzo(double prezzo) {
+        this.prezzo = prezzo;
     }
 }
